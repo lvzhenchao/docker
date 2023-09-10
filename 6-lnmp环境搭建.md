@@ -22,7 +22,7 @@
 nginx配置
 location ~ \.php$ {
     root           /usr/share/nginx/html;
-    fastcgi_pass   php:9000;  这个PHP 就是【--link lnmp_php:php】，可以看看etc/hosts
+    fastcgi_pass   php:9000;  这个PHP 就是【可以看看etc/hosts】
     fastcgi_index  index.php;
     fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
     include        fastcgi_params;
@@ -36,7 +36,7 @@ nginx的hosts
     ff00::0	ip6-mcastprefix
     ff02::1	ip6-allnodes
     ff02::2	ip6-allrouters
-    192.168.215.3	php c41824e562c3 lnmp_php 【重点】
+    192.168.215.3	php c41824e562c3 lnmp_php 【重点：php可以做为对外的IP名称替换】
     192.168.215.4	6c3ee0ae2cc2
     
 php的容器ID：c41824e562c3
@@ -47,7 +47,7 @@ php的hosts
     ff00::0	ip6-mcastprefix
     ff02::1	ip6-allnodes
     ff02::2	ip6-allrouters
-    192.168.215.2	mysql 7cb23988cb7d lnmp_mysql 【重点】
+    192.168.215.2	mysql 7cb23988cb7d lnmp_mysql 【重点:mysql可以作为对外的IP名称替换】
     192.168.215.3	c41824e562c3
     
 mysql的容器ID：7cb23988cb7d
