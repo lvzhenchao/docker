@@ -31,10 +31,10 @@ COPY <src><dest> 直接复制，不会解压
 
 ### 设置指令：指用于设置image的属性，其指定的操作将在运行image的容器中执行
 ```
-CMD（设置container启动时执行的操作）（docker ps 中的command）
+CMD（设置container启动时执行的操作）（docker ps 中的command） 容器默认启动命令；
 CMD ["executable","param1","param2"]             【重点】
 
-ENTRYPOINT（设置container启动时执行的操作）（跟上面差不多）
+ENTRYPOINT（设置container启动时执行的操作）（跟上面差不多） 用于容器启动后要执行的一些初始化操作，可以执行shell文件
 ENTRYPOINT ["executable", "param1", "param2"]
 
 USER（设置container容器的用户）
